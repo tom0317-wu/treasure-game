@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(run)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "PowerShell(npm install *)",
+      "PowerShell(\\(Get-Command npm\\).Source)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(\\(Get-Command node -ErrorAction SilentlyContinue\\).Source)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:5173\" -TimeoutSec 5 -UseBasicParsing; $r.StatusCode } catch { \"Server not responding: $_\" })",
+      "WebFetch(domain:claudecodetreasuregame-initial-pearl-five.vercel.app)",
+      "Bash(curl -s -o - -w \"\\\\n---STATUS:%{http_code}---\" \"https://claudecodetreasuregame-initial-pearl-five.vercel.app/\")",
+      "Bash(curl *)",
+      "PowerShell(vercel *)",
+      "PowerShell(gh auth *)"
+    ]
+  }
+}
